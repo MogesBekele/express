@@ -14,14 +14,15 @@ app.use('/welcome',(req, res, next) => {
 });
 
 //routes
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 
 app.get("/welcome", (req, res) => {
   res.send('express middleware')
 });
 
-app.get("/", (req, res) => {
-  res.send("Welcome");
-});
+
 
 // Start the server  on the specified port
 app.listen(PORT, (req, res) => {
