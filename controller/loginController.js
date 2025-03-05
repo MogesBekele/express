@@ -1,8 +1,7 @@
+export const LoginController = (req, res) => {
+  res.send("welcome login page");
+};
 
-export const LoginController = (req, res)=>{
-  res.send('welcome login page')
-}
-
-export const RegisterController=  (req, res)=>{
-  res.send('welcome register page')
-}
+export const RegisterController = (req, res) => {
+  res.send("welcome register page");
+};
