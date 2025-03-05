@@ -8,9 +8,15 @@ app.use(express.json());
 
 //middleware
 
-app.use((req, res, next) => {
+app.use('/welcome',(req, res, next) => {
   console.log(`a new requesr resieved at ` + Date.now());
   next();
+});
+
+//routes
+
+app.get("/welcome", (req, res) => {
+  res.send('express middleware')
 });
 
 app.get("/", (req, res) => {
