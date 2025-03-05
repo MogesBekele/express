@@ -6,7 +6,16 @@ const PORT = 3000;
 
 app.use(express.json());
 
-//middleware
+//ejs
+
+app.set('view engine', 'ejs');
+
+app.get('/home', (req, res) => {
+  res.render('home', {
+    title: 'My Home Page',
+    message: 'Welcome to my website!'
+  });
+});
 
 //routes
 app.get("/", (req, res) => {
