@@ -31,6 +31,15 @@ app.delete("/users/:id", (req, res) => {
     message: `delete user with id ${userId}`,
   });
 });
+
+
+//catch all invalid requests
+
+app.get('*',(req, res) => {
+  res.send('invalid request');
+});
+
+ // Start the server  on the specified port
 app.listen(PORT, (req, res) => {
   console.log(`Server is running on port ${PORT}`);
 });
