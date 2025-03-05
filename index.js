@@ -15,7 +15,13 @@ app.post('/users', (req, res) => {
 res.json({name, emial})
  
 })
+app.put('/users/:id', (req, res) => {
+  const userId  = req.params.id;
 
+  // update user with given id
+  // res.json({ userId })
+ 
+})
 app.listen(PORT, (req, res) => {
   console.log(`Server is running on port ${PORT}`);
 });
