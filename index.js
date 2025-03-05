@@ -8,14 +8,6 @@ app.use(express.json());
 
 //middleware
 
-app.use((req, res, next) => {
-  console.log("Middleware: Request Received");
-  res.on('finish', ()=>{
-    console.log('Middleware: Response Sent')
-  })
-  next();
-});
-
 
 
 //routes
@@ -23,6 +15,23 @@ app.get("/", (req, res) => {
   res.send("Welcome");
   console.log('middle')
 });
+
+app.get('/error', ()=>{
+  throw new Error('Something went wrong');
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
