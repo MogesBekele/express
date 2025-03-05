@@ -8,11 +8,17 @@ app.use(express.json());
 
 //middleware
 
+app.use((req, res, next) => {
+  console.log("Middleware: Request Received");
+  next();
+});
+
 
 
 //routes
 app.get("/", (req, res) => {
   res.send("Welcome");
+  console.log('middle')
 });
 
 
