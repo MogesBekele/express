@@ -14,9 +14,6 @@ app.get("/", (req, res) => {
   console.log("middle");
 });
 
-app.get("/error", () => {
-  throw new Error("Something went wrong");
-});
 
 
 // Start the server  on the specified port
