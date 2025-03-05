@@ -22,6 +22,15 @@ app.put("/users/:id", (req, res) => {
     message: `update ${name}, ${email} and ${userId}`,
   });
 });
+
+app.delete("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  // delete user with given id
+  res.json({
+    message: `delete user with id ${userId}`,
+  });
+
+})
 app.listen(PORT, (req, res) => {
   console.log(`Server is running on port ${PORT}`);
 });
