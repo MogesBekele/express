@@ -1,8 +1,8 @@
 
-const Login = (req, res)=>{
+const LoginController = (req, res)=>{
   res.send('welcome login page')
 }
 
-const register=  (req, res)=>{
+const RegisterController=  (req, res)=>{
   res.send('welcome register page')
 }
