@@ -1,5 +1,6 @@
 import express from "express";
-import route from "./routes/route.js";
+
+import router from "./routes/route.js";
 
 const app = express();
 
@@ -7,7 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use("/user", route);
+app.use("/user", router);
 
 
 // Start the server on the specified port
