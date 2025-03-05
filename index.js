@@ -11,7 +11,8 @@ app.use(express.json());
 
 app.use((req, res, next) => {
 
-  
+  console.log(`a new requesr resieved at ` + Date.now())
+  next();
 })
 
 app.get("/", (req, res) => {
