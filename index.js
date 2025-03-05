@@ -10,17 +10,12 @@ app.use(express.json());
 
 app.set('view engine', 'ejs');
 
-app.get('/home', (req, res) => {
-  res.render('home', {
-    title: 'My Home Page',
-    message: 'Welcome to my website!'
-  });
-});
 
 //routes
 app.get("/", (req, res) => {
-  res.send("Welcome");
-  console.log("middle");
+ const username = 'john'
+  res.render('index', { username });
+
 });
 
 
