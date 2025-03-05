@@ -17,9 +17,11 @@ res.json({name, emial})
 })
 app.put('/users/:id', (req, res) => {
   const userId  = req.params.id;
-  const { name, emial } = req.body;
+  const { name, email } = req.body;
   // update user with given id
-  res.json({id: userId, name, emial})
+  res.json({
+    message: `update ${name}, ${email} and ${userId}`
+  })
 
  
  
