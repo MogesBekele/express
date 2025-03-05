@@ -9,6 +9,7 @@ app.use(express.json());
 
 app.use("/user", route);
 
+
 // Start the server on the specified port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
