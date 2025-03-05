@@ -1,5 +1,5 @@
 import express from "express";
-import ejs from "ejs";
+
 const app = express();
 
 const PORT = 3000;
@@ -7,13 +7,11 @@ const PORT = 3000;
 app.use(express.json());
 
 //ejs
+app.use(express.static('public'))
 
-app.set("view engine", "ejs");
 
-//routes
 app.get("/", (req, res) => {
-  const username = "john";
-  res.render("index", { username });
+  res.send('wellocome')
 });
 
 // Start the server  on the specified port
