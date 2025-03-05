@@ -10,6 +10,9 @@ app.use(express.json());
 
 app.use((req, res, next) => {
   console.log("Middleware: Request Received");
+  res.on('finish', ()=>{
+    console.log('Middleware: Response Sent')
+  })
   next();
 });
 
