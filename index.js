@@ -6,6 +6,14 @@ const PORT = 3000;
 
 app.use(express.json());
 
+
+//middleware
+
+app.use((req, res, next) => {
+
+  
+})
+
 app.get("/", (req, res) => {
 res.send('Welcome')
 });
