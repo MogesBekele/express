@@ -8,12 +8,12 @@ app.use(express.json());
 
 app.get("/user/:name/:id", (req, res) => {
   const { name, id } = req.params;
-  res.json({ name, id });
+  res.json({ name:name, id:id });
 });
 
 app.post("/users", (req, res) => {
-  const { name, emial } = req.body;
-  res.json({ name, emial });
+  const { name, email } = req.body;
+  res.json({ name, email });
 });
 app.put("/users/:id", (req, res) => {
   const userId = req.params.id;
