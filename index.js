@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("welcome to express");
 });
 
-app.post('/users/:name/:id', (req, res) => {
+app.get('/users/:name/:id', (req, res) => {
   const { name, id } = req.params;
   res.send(`wellcome ${name} ${id}`);
  
