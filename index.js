@@ -8,6 +8,7 @@ app.use(express.json());
 
 //ejs
 app.use(express.static('public'))
+app.use(express.static('images'))
 
 
 app.get("/", (req, res) => {
