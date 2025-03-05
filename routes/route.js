@@ -1,9 +1,6 @@
 import express from 'express';
 
-import LoginController from './controllers/loginController';
-
-import RegisterController from './controllers/registerController';
-
+import {LoginController, RegisterController} from '../controller/loginController'
 const router = express.Router();
 
 // GET request to get all users
