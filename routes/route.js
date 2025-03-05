@@ -10,3 +10,6 @@ const router = express.Router();
 
 router.get('/login', LoginController)
 router.get('/register', RegisterController)
+
+export default router;
+
