@@ -8,9 +8,10 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(upload.array())
 
 app.use("/user", route);
-app.use(upload.array())
+
 
 app.post("/form", (req, res) => {
   const {email, password}= req.body
