@@ -14,8 +14,8 @@ app.use(upload.array());
 app.use("/user", route);
 
 app.post("/form", (req, res) => {
-  const { email, password } = req.body;
-  console.log(email, password);
+  
+  console.log(req.body);
 
   res.send("form resieved");
 });
