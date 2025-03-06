@@ -7,6 +7,7 @@ const app = express();
 const storage = multer.diskStorage({
   destination: "uploads",
   filename: (req, res, cb)=>{
+    cb(null, Date.now() + "-" + req.file.originalname); // The filename will be the current timestamp + original name of the file
     
   }
 });
