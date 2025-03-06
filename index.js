@@ -1,9 +1,10 @@
 import express from "express";
 import route from "./routes/route.js";
+import mongoose from "mongoose";
 
 const app = express();
 
-MONGODB_URI  = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net";
+const MONGODB_URI  = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net";
 
 //mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
