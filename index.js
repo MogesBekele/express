@@ -10,9 +10,9 @@ app.use(express.json());
 app.use("/user", route);
 
 app.post("/form", (req, res) => {
-  const form = req.body;
 
-  console.log(form);
+
+  console.log(req.body);
 
   res.send("form resieved");
 });
