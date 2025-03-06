@@ -16,6 +16,7 @@ app.use("/user", route);
 app.post("/form", (req, res) => {
   
   console.log(req.body);
+  console.log(req.file);  // req.file contains the uploaded file object
 
   res.send("form resieved");
 });
