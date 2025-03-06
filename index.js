@@ -9,6 +9,10 @@ app.use(express.json());
 
 app.use("/user", route);
 
+app.post('/form', (req, res)=>{
+  con
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
