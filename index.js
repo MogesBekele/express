@@ -4,6 +4,8 @@ import multer from "multer";
 
 const app = express();
 
+MONGODB_URL= 'mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net'
+
 
 
 const PORT = 3000;
