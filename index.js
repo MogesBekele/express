@@ -6,6 +6,9 @@ const app = express();
 
 const storage = multer.diskStorage({
   destination: "uploads",
+  filename: (req, res, cb)=>{
+    
+  }
 });
 const PORT = 3000;
 const upload = multer(storage);
