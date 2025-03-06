@@ -5,17 +5,16 @@ import multer from "multer";
 const app = express();
 
 const PORT = 3000;
-const upload = multer()
+const upload = multer();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(upload.array())
+app.use(upload.array());
 
 app.use("/user", route);
 
-
 app.post("/form", (req, res) => {
-  const {email, password}= req.body
+  const { email, password } = req.body;
   console.log(email, password);
 
   res.send("form resieved");
