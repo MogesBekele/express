@@ -4,12 +4,6 @@ import multer from "multer";
 
 const app = express();
 
-const storage = multer.diskStorage({
-  destination: "uploads",
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  },
-});
 
 const upload = multer({ storage,
   limits: { fileSize: 1000000 }, // 1MB
