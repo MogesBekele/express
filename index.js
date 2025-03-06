@@ -1,17 +1,13 @@
 import express from "express";
 import route from "./routes/route.js";
 import multer from "multer";
-import { storage } from "./config/multer.js";
 
 const app = express();
-
-
 
 const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 
 app.use("/user", route);
 
