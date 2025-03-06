@@ -11,7 +11,7 @@ const MONGODB_URI  = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongod
 const PORT = 3000;
 
 mongoose.connect(MONGODB_URI).then(()=>{
-  console.log("Connected to MongoDB");
+  console.log("Connected to MongoDB")
 })
 
 
