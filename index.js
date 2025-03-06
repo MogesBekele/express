@@ -5,16 +5,13 @@ import { storage } from "./config/multer.js";
 
 const app = express();
 
-const upload = multer({
-  storage,
-  limits: { fileSize: 1000000 }, // 1MB
-});
+
 
 const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(upload.single("image"));
+
 
 app.use("/user", route);
 
