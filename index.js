@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/user", route);
 
 app.post("/form", (req, res) => {
-  console.log(req.body);
+  const {email, password}= req.body
+  console.log(email, password);
 
   res.send("form resieved");
 });
