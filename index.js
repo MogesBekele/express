@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
   }
 })
 const PORT = 3000;
-const upload = multer();
+const upload = multer(storage);
 
 
 app.use(express.json());
