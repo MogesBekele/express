@@ -1,10 +1,9 @@
 import express from "express";
 import route from "./routes/route.js";
-import multer from "multer";
 
 const app = express();
 
-MONGODB_URL= 'mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net'
+MONGODB_URI= 'mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net'
 
 //mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
