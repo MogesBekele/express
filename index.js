@@ -4,14 +4,13 @@ import mongoose from "mongoose";
 
 const app = express();
 
-const MONGODB_URI  = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net";
+const MONGODB_URI  = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net/express";
 
 //mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 const PORT = 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 app.use("/user", route);
 
