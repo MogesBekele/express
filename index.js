@@ -9,7 +9,7 @@ const upload = multer();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(upload.array());
+app.use(upload.single('image'));
 
 app.use("/user", route);
 
