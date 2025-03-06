@@ -10,7 +10,7 @@ const PORT = 3000;
 
 const MONGODB_URI = 'mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net/express'
 
-mongoose.connect(process.env.MONGODB_URI).then(() => {
+mongoose.connect(MONGODB_URI).then(() => {
   console.log("Connected to MongoDB");
 });
 
