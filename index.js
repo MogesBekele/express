@@ -1,6 +1,7 @@
 import express from "express";
 import route from "./routes/route.js";
 import multer from "multer";
+import { storage } from "./config/multer.js";
 
 const app = express();
 
