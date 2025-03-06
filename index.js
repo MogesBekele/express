@@ -14,7 +14,7 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(upload.single("image"));
+
 
 app.use("/user", route);
 
