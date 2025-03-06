@@ -9,13 +9,13 @@ app.use(express.json());
 
 app.use("/user", route);
 
-app.post('/form', (req, res)=>{
-  const form= req.body
+app.post("/form", (req, res) => {
+  const form = req.body;
 
-  console.log(form)
+  console.log(form);
 
-  res.send('fporm resieved')
-})
+  res.send("fporm resieved");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
