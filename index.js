@@ -3,11 +3,9 @@ import route from "./routes/route.js";
 
 const app = express();
 
-MONGODB_URI= 'mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net'
+MONGODB_URI = "mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net";
 
 //mongodb+srv://mogesbekele32:<db_password>@cluster0.xcdr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-
 
 const PORT = 3000;
 
