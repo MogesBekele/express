@@ -11,6 +11,10 @@ app.use("/user", route);
 
 app.post('/form', (req, res)=>{
   const form= req.body
+
+  console.log(form)
+
+  res.send('fporm resieved')
 })
 
 app.listen(PORT, () => {
