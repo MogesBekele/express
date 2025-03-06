@@ -14,7 +14,7 @@ app.post("/form", (req, res) => {
 
   console.log(form);
 
-  res.send("fporm resieved");
+  res.send("form resieved");
 });
 
 app.listen(PORT, () => {
