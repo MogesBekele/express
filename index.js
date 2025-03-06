@@ -10,8 +10,6 @@ app.use(express.json());
 app.use("/user", route);
 
 app.post("/form", (req, res) => {
-
-
   console.log(req.body);
 
   res.send("form resieved");
