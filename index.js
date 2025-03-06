@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/user", route);
 
 app.post('/form', (req, res)=>{
-  con
+  const form= req.body
 })
 
 app.listen(PORT, () => {
