@@ -1,6 +1,6 @@
 import express from "express";
 import route from "./routes/route.js";
-import
+import multer from "multer";
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/user", route);
+app.use(upload.array())
 
 app.post("/form", (req, res) => {
   const {email, password}= req.body
