@@ -41,7 +41,7 @@ app.post("/login", (req, res) => {
   res.send("Logged in successfully");
 });
 
-app.get("/logout", (req, res) => {
+app.get("/remove", (req, res) => {
   req.session.destroy();
   res.send("Logged out successfully");
 });
