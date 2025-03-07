@@ -57,6 +57,7 @@ app.get("/dashboard", (req, res) => {
   try {
     const decodedToken = jwt.verify(token, "secretKey");
     res.send("Welcome to the dashboard, " + decodedToken.username);
+    console.log(token)
   } catch (err) {
     res.status(403).send("Unauthorized");
   }
