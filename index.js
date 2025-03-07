@@ -19,7 +19,7 @@ app.get("/fetch", (req, res) => {
 });
 
 app.get("/remove-cookie", (req, res) => {
-  res.clearCookie("myCookie");
+  res.clearCookie("name");
   res.send("Cookie removed");
 });
 app.listen(PORT, () => {
