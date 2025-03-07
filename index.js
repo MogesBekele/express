@@ -7,8 +7,7 @@ app.use(cookieParser());
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  // Set a cookie
-  res.cookie("name", "express-app", { maxAge: 360000 });
+ 
   res.send("Hello, World!");
 });
 
