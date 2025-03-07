@@ -13,8 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/fetch", (req, res) => {
-  // Get the cookie
-  console.log(req.cookies);
+
 
 });
 
