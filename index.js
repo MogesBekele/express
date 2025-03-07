@@ -10,10 +10,6 @@ const PORT = 3000;
 
 const MONGODB_URI = 'mongodb+srv://mogesbekele32:moges123@cluster0.xcdr3.mongodb.net/exp'
 
-mongoose.connect(MONGODB_URI).then(() => {
-  console.log("Connected to MongoDB");
-});
-
 app.use("/user", route);
 
 app.post("/form", (req, res) => {
