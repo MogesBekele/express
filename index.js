@@ -4,6 +4,9 @@ import session from "express-session";
 
 const PORT = 3000;
 const app = express();
+
+app.use(express.json()); // Add this line to parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // Add this line to parse URL-encoded bodies
 app.use(cookieParser());
 app.use(
   session({
@@ -17,6 +20,7 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
+
 const users = [];
 app.post("/register", (req, res) => {
   const { username, password } = req.body;
@@ -32,12 +36,9 @@ app.post("/login", (req, res) => {
   if (!user || user.password !== password) {
     res.status(401).send("Invalid username or password");
     return;
-    
   }
   req.session.user = user;
   res.send("Logged in successfully");
-
-
 });
 
 app.listen(PORT, () => {
