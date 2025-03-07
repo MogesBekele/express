@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.get("/", (req, res) => {
   // Set a cookie
-  res.cookie("name", "express-app");
+  res.cookie("name", "express-app", {maxAge: 3000});
   res.send("Hello, World!");
 });
 
