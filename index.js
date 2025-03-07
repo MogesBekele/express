@@ -1,6 +1,5 @@
 import express from "express";
-import cookieParser from "cookie-parser";
-import session from "express-session";
+
 
 const PORT = 3000;
 const app = express();
@@ -29,8 +28,7 @@ app.post("/login", (req, res) => {
     res.status(401).send("Invalid username or password");
     return;
   }
-  req.session.user = user;
-  res.send("Logged in successfully");
+ 
 });
 
 app.get("/remove", (req, res) => {
