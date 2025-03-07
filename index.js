@@ -43,7 +43,12 @@ app.get("/remove", (req, res) => {
 
 app.get("/dashboard", (req, res) => {
   const token = req.headers.authorization?.split(" ")[1];
-  const decodedtoken = jwt.verify(token, "secretKey")
+  const decodedToken = jwt.verify(token, "secretKey")
+
+  if (decodedToken.username) {
+    res.send("Welcome to the dashboard, " + decodedToken.username);
+    
+  }
 
 
 });
