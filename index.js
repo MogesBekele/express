@@ -4,6 +4,7 @@ import session from "express-session";
 
 const app = express();
 app.use(cookieParser());
+app.use(session());
 
 
 const PORT = 3000;
