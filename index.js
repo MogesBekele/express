@@ -29,7 +29,7 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
   const user = users.find((u) => u.username === username);
 
-  if (!user || !user.password==password) {
+  if (!user || user.password !== password) {
     res.status(401).send("Invalid username or password");
     return;
     
