@@ -13,22 +13,9 @@ app.use(session( {
   //cookie: { secure: false }  // Set secure to false for development environment. In production, set secure to true.  // This will make the cookie accessible only over HTTP (not HTTPS)
 }))
 
-app.get('/visit', (req,res)=>{
-  if (req.session.page_views) {
-    req.session.page_views++;
- res.send(`you visited this page ${req.session.page_views}`)
-    
-  }else{
-    req.session.page_views = 1;
-    res.send("Welcome to this page for the first time!");
-  }
-})
 
-app.get('/remove-visit', (req, res) => {
-req.session.destroy();
-  res.send("Session destroyed!");
 
-})
+
 
 
 app.get("/", (req, res) => {
