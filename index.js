@@ -42,8 +42,13 @@ app.post("/login", (req, res) => {
 });
 
 app.get('/remove', (req, res) => {
-   res.session.destroy()
-})
+  req.session.destroy(err => {
+    if (err) {
+      return res.status(500).send("Failed to destroy session");
+    }
+    res.send("Session destroyed successfully");
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
