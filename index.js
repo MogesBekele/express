@@ -10,7 +10,7 @@ app.use(session( {
   secret: "mysecretkey",
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false }  // Set secure to false for development environment. In production, set secure to true.  // This will make the cookie accessible only over HTTP (not HTTPS)
+  //cookie: { secure: false }  // Set secure to false for development environment. In production, set secure to true.  // This will make the cookie accessible only over HTTP (not HTTPS)
 }))
 
 app.get('/visit', (req,res)=>{
