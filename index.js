@@ -1,6 +1,6 @@
 import express from "express";
 import route from "./routes/route.js";
-import mongoose from "mongoose";
+
 
 const app = express();
 
