@@ -24,6 +24,11 @@ app.get('/visit', (req,res)=>{
   }
 })
 
+app.get('/remove-visit', (req, res) => {
+  
+
+})
+
 
 app.get("/", (req, res) => {
  
