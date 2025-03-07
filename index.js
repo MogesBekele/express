@@ -21,6 +21,8 @@ const users = []
 app.post('/register', (req, res) => {
   const {username, password} =req.body;
   users.push({username, password})
+
+  res.send('User registered successfully')
   
 
 
