@@ -12,10 +12,7 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get("/fetch", (req, res) => {
 
-
-});
 
 app.get("/remove-cookie", (req, res) => {
   res.clearCookie("name");
