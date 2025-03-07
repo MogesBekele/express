@@ -41,7 +41,12 @@ app.post("/login", (req, res) => {
   res.send("Logged in successfully");
 });
 
-app.get('/remove', (req, res) => {
+app.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.send("Logged out successfully");
+});
+
+app.get('/dashboard', (req, res) => {
  if (!req.session.user) {
   return res.send('unauthenticated');
   
