@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
+app.get("/fetch", (req, res) => {
+  // Get the cookie
+  console.log(req.cookies.myCookie);
+  res.send("Cookie value: " + req.cookies.myCookie);
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
