@@ -46,12 +46,11 @@ app.get("/remove", (req, res) => {
   res.send("Logged out successfully");
 });
 
-app.get('/dashboard', (req, res) => {
- if (!req.session.user) {
-  return res.send('unauthenticated');
-  
- }
- res.send('wellcome')
+app.get("/dashboard", (req, res) => {
+  if (!req.session.user) {
+    return res.send("unauthenticated");
+  }
+  res.send("wellcome");
 });
 
 app.listen(PORT, () => {
