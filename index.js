@@ -30,7 +30,6 @@ app.post("/login", (req, res) => {
   const user = users.find((u) => u.username === username);
 
   if (user) {
-    req.session.user = user;
     res.send("Login successful");
   } else {
     res.status(401).send("Invalid credentials");
