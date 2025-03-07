@@ -1,8 +1,10 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import session from "express-session";
 
 const app = express();
 app.use(cookieParser());
+
 
 const PORT = 3000;
 
