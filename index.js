@@ -15,6 +15,8 @@ app.use(session( {
 
 app.get('/visit', (req,res)=>{
   if (req.session.page_view) {
+    req.session.page_view++;
+ res.send(`you visited this page ${req.session.page_view}`)
     
   }
 })
