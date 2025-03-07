@@ -9,12 +9,9 @@ const PORT = 3000;
 app.get("/", (req, res) => {
   res.send("Hello, World!");
   // Set a cookie
-  res.cookie("myCookie", "Hello, World!");
-  // Cookies that have not been signed
-  console.log("Cookies: ", req.cookies);
+  res.cookie("myCookie", "express-app");
 
-  // Cookies that have been signed
-  console.log("Signed Cookies: ", req.signedCookies);
+
 });
 
 app.listen(PORT, () => {
