@@ -49,6 +49,9 @@ app.get("/dashboard", (req, res) => {
     res.send("Welcome to the dashboard, " + decodedToken.username);
     
   }
+  else{
+    res.status(403).send("Unauthorized");
+  }
 
 
 });
