@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
@@ -63,6 +68,3 @@ app.get("/", (req, res) => {
 //   }
 // });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
