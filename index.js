@@ -13,6 +13,11 @@ app.use(session( {
   cookie: { secure: false }  // Set secure to false for development environment. In production, set secure to true.  // This will make the cookie accessible only over HTTP (not HTTPS)
 }))
 
+app.get('/visit', (req,res)=>{
+  if (req.session.page_view) {
+    
+  }
+})
 
 
 app.get("/", (req, res) => {
