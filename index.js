@@ -41,6 +41,10 @@ app.post("/login", (req, res) => {
   res.send("Logged in successfully");
 });
 
+app.get('/remove', (req, res) => {
+   res.session.destroy()
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
