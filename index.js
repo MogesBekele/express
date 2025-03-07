@@ -13,10 +13,7 @@ app.get("/", (req, res) => {
 
 
 
-app.get("/remove-cookie", (req, res) => {
-  res.clearCookie("name");
-  res.send("Cookie removed");
-});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
