@@ -29,11 +29,15 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
   const user = users.find((u) => u.username === username);
 
-  if (user) {
-    res.send("Login successful");
-  } else {
-    res.status(401).send("Invalid credentials");
+  if (!user || !user.password==password) {
+    res.status(401).send("Invalid username or password");
+    return;
+    
   }
+  req.session.user = user;
+  res.send("Logged in successfully");
+
+
 });
 
 app.listen(PORT, () => {
