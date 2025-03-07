@@ -22,11 +22,12 @@ app.post("/register", async (req, res) => {
   res.send("User registered successfully");
 });
 
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const user = users.find((u) => u.username === username);
+  const create = await bcrypt.compare(password, user.password)
 
-  if (!user || user.password !== password) {
+  if (!user || !create) {
     res.status(401).send("Invalid username or password");
     return;
   }
