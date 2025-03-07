@@ -42,12 +42,11 @@ app.post("/login", (req, res) => {
 });
 
 app.get('/remove', (req, res) => {
-  req.session.destroy(err => {
-    if (err) {
-      return res.status(500).send("Failed to destroy session");
-    }
-    res.send("Session destroyed successfully");
-  });
+ if (!req.session.user) {
+  return res.send('unauthenticated');
+  
+ }
+ res.send('wellcome')
 });
 
 app.listen(PORT, () => {
