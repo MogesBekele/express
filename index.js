@@ -8,6 +8,8 @@ const PORT = 3000;
 
 app.get("/", (req, res) => {
   res.send("Hello, World!");
+  // Set a cookie
+  res.cookie("myCookie", "Hello, World!", { expires: new Date(Date.now() + 900000) });
   // Cookies that have not been signed
   console.log("Cookies: ", req.cookies);
 
