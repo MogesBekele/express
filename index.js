@@ -41,7 +41,12 @@ app.get("/remove", (req, res) => {
   res.send("Logged out successfully");
 });
 
-app.get("/dashboard", (req, res) => {});
+app.get("/dashboard", (req, res) => {
+  const token = req.headers.authorization?.split(" ")[1];
+  const decodedtoken = jwt.verify(token, "secretKey")
+
+
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
