@@ -25,7 +25,13 @@ app.get('/visit', (req,res)=>{
 })
 
 app.get('/remove-visit', (req, res) => {
-  
+  if (req.session.page_views) {
+    delete req.session.page_views;
+    res.send("Session data removed.");
+  } else {
+    res.send("No session data to remove.");
+  }
+
 
 })
 
