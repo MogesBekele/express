@@ -7,15 +7,7 @@ const app = express();
 
 app.use(express.json()); // Add this line to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Add this line to parse URL-encoded bodies
-app.use(cookieParser());
-app.use(
-  session({
-    secret: "mysecretkey",
-    resave: false,
-    saveUninitialized: false,
-    //cookie: { secure: false }  // Set secure to false for development environment. In production, set secure to true.  // This will make the cookie accessible only over HTTP (not HTTPS)
-  })
-);
+
 
 app.get("/", (req, res) => {
   res.send("Hello, World!");
@@ -47,10 +39,7 @@ app.get("/remove", (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  if (!req.session.user) {
-    return res.send("unauthenticated");
-  }
-  res.send("wellcome");
+  
 });
 
 app.listen(PORT, () => {
