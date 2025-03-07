@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.get("/", (req, res) => {
   // Set a cookie
-  res.cookie("myCookie", "express-app");
+  res.cookie("name", "express-app");
   res.send("Hello, World!");
 });
 
