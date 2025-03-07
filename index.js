@@ -17,16 +17,22 @@ app.use(
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
-const users = []
-app.post('/register', (req, res) => {
-  const {username, password} =req.body;
-  users.push({username, password})
+const users = [];
+app.post("/register", (req, res) => {
+  const { username, password } = req.body;
+  users.push({ username, password });
 
-  res.send('User registered successfully')
+  res.send("User registered successfully");
+});
+
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+  const user = users.find(u=>u.username === username)
+
   
+});
 
 
-})
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
