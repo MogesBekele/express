@@ -27,12 +27,15 @@ app.post("/register", (req, res) => {
 
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-  const user = users.find(u=>u.username === username)
+  const user = users.find((u) => u.username === username);
 
-  
+  if (user) {
+    req.session.user = user;
+    res.send("Login successful");
+  } else {
+    res.status(401).send("Invalid credentials");
+  }
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
