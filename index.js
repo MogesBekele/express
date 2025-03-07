@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/fetch", (req, res) => {
   // Get the cookie
-  console.log(req.cookies.myCookie);
+  console.log('Cookies: ', req.cookies)
   res.send("Cookie value: " + req.cookies.myCookie);
 });
 app.listen(PORT, () => {
