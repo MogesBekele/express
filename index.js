@@ -31,6 +31,9 @@ app.post("/login", async (req, res) => {
     res.status(401).send("Invalid username or password");
     return;
   }
+  
+  const token = jwt.sign({ username }, "secretKey", { expiresIn: "1h" });
+  res.json({ token });
 });
 
 app.get("/remove", (req, res) => {
