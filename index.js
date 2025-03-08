@@ -12,7 +12,9 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get('/ap')
+app.get('/api/products', (req, res) => {
+  
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
