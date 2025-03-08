@@ -15,6 +15,12 @@ app.get("/", (req, res) => {
 
 //synchronous error
 app.get("/error", (req, res, next) => {
+  try {
+    throw new Error("An error occurred");
+    
+  } catch (error) {
+    
+  }
 
 
 })
