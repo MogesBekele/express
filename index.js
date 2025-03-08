@@ -32,7 +32,7 @@ app.get("/api/products/:id", (req, res) => {
     { id: 3, name: "Product 3", price: 300 },
   ];
 
-  res.status(200).json(products.id[0])
+  res.status(200).json(products.id[1])
 
 
 
