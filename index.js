@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
+//201 for successfuly get request
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
