@@ -19,6 +19,7 @@ app.get("/error", (req, res, next) => {
     throw new Error("An error occurred");
     
   } catch (error) {
+    next(error);
     
   }
 
