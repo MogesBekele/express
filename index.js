@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 //synchronous error
-app.get("/sync-error", (req, res, next) => {
+app.get("/sync", (req, res, next) => {
   try {
     throw new Error("An error occurred");
   } catch (error) {
