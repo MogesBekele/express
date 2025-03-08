@@ -42,6 +42,7 @@ app.get("/api/products/:id", (req, res) => {
 
 app.post("/api/products", (req, res) => {
   const product = req.body;
+  product.id = Date.now()
   if (!product.name ||!product.price) {
     return res.status(400).send("Name and price are required");
   }
