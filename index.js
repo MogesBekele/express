@@ -36,6 +36,11 @@ app.get("/async-error", async (req, res, next) => {
 });
 //global error handler
 
+app.use((error, req, res, next) => {
+  console.error(error.message);
+  res.status(500).send("Server error");
+});
+
 // app.get("/api/products", (req, res) => {
 //   const products = [
 //     { id: 1, name: "Product 1", price: 100 },
