@@ -31,7 +31,7 @@ app.get("/async-error", async (req, res, next) => {
       }, 1000);
     });
   } catch (error) {
-    res.status(500).send(error.message);
+  next(error);
   }
 });
 
