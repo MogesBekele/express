@@ -22,6 +22,8 @@ app.get("/api/products", (req, res) => {
   res.status(200).json(products);
 });
 
+//for single products
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
