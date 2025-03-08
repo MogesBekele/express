@@ -15,7 +15,9 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-//201 for successfuly get request
+//200 for successfuly get request
+//201 for successfuly post request
+//202 for pu and delete
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
