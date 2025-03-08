@@ -19,6 +19,8 @@ app.get('/api/products', (req, res) => {
     { id: 3, name: "Product 3", price: 300 },
   ];
 
+  res.status(200).json(products);
+
 })
 
 app.listen(PORT, () => {
