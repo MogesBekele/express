@@ -30,7 +30,7 @@ app.get("/api/products/:id", (req, res) => {
     { id: 3, name: "Product 3", price: 300 },
   ];
 
-  const product = products.find((p) => p.id === parseInt(req.params.id));
+  const product = products.find((p) => p.id === Number(req.params.id));
   if (!product) {
     return res.status(404).send("Product not found");
   }
