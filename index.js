@@ -12,21 +12,14 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-
 //synchronous error
 app.get("/error", (req, res, next) => {
   try {
     throw new Error("An error occurred");
-    
   } catch (error) {
     next(error);
-    
   }
-
-
-})
-
-
+});
 
 // app.get("/api/products", (req, res) => {
 //   const products = [
