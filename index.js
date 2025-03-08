@@ -23,7 +23,7 @@ app.get("/sync", (req, res, next) => {
 
 // asynchronous error
 
-app.get("/async-error", async (req, res, next) => {
+app.get("/async", async (req, res, next) => {
   try {
     await new Promise((resolve, reject) => {
       setTimeout(() => {
