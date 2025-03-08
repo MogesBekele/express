@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 });
 //200 for successfuly get request
 //201 for successfuly post request
-//202 for pu and delete
+//204 for pu and delete
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
