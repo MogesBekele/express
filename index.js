@@ -13,11 +13,25 @@ app.get("/", (req, res) => {
 });
 
 //synchronous error
-app.get("/error", (req, res, next) => {
+app.get("/sync-error", (req, res, next) => {
   try {
     throw new Error("An error occurred");
   } catch (error) {
     next(error);
+  }
+});
+
+// asynchronous error
+
+app.get("/async-error", async (req, res) => {
+  try {
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        reject(new Error("An error occurred"));
+      }, 1000);
+    });
+  } catch (error) {
+    res.status(500).send(error.message);
   }
 });
 
