@@ -7,16 +7,15 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-process.on('uncaughtException', (error)=>{
-console.log(error)
+process.on("uncaughtException", (error) => {
+  console.log(error);
 
   process.exit(1);
-}) //for any other error
+}); //for any other error
 
-process.on('uncaughtException', (reason, promise)=>{
-  console.log(reason)
-  
-})
+process.on("uncaughtException", (reason, promise) => {
+  console.log(reason);
+});
 
 app.get("/", (req, res) => {
   res.send("Hello, World!");
@@ -34,7 +33,7 @@ app.get("/sync", (req, res, next) => {
 // asynchronous error
 app.get("/async", async (req, res, next) => {
   try {
-    await Promise.reject(new Error('Async error occurred'));
+    await Promise.reject(new Error("Async error occurred"));
   } catch (error) {
     next(error);
   }
