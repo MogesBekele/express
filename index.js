@@ -13,6 +13,11 @@ process.on('uncaughtException', ()=>{
   process.exit(1);
 }) //for any other error
 
+process.on('uncaughtException', (reason, promise)=>{
+  console.log(reason)
+  
+})
+
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
