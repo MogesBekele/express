@@ -19,6 +19,7 @@ app.listen(PORT, () => {
 //201 for successfuly post request
 //204 for pu and delete
 // 4xx for client error like bad request
+//5xx for server error 
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
