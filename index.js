@@ -25,11 +25,7 @@ app.get("/sync", (req, res, next) => {
 
 app.get("/async", async (req, res, next) => {
   try {
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        reject(new Error("An error occurred"));
-      }, 1000);
-    });
+    await Promise.reject(new Error('Async error occured'))
   } catch (error) {
     next(error);
   }
