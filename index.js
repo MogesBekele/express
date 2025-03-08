@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 process.on('uncaughtException', (error)=>{
-  console.error('An uncaught error occurred!');
-  console.error(new Error().stack);
+console.log(error)
+
   process.exit(1);
 }) //for any other error
 
