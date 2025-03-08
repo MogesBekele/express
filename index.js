@@ -12,42 +12,42 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get("/api/products", (req, res) => {
-  const products = [
-    { id: 1, name: "Product 1", price: 100 },
-    { id: 2, name: "Product 2", price: 200 },
-    { id: 3, name: "Product 3", price: 300 },
-  ];
+// app.get("/api/products", (req, res) => {
+//   const products = [
+//     { id: 1, name: "Product 1", price: 100 },
+//     { id: 2, name: "Product 2", price: 200 },
+//     { id: 3, name: "Product 3", price: 300 },
+//   ];
 
-  res.status(200).json(products);
-});
+//   res.status(200).json(products);
+// });
 
-// for single products
-app.get("/api/products/:id", (req, res) => {
-  const products = [
-    { id: 1, name: "Product 1", price: 100 },
-    { id: 2, name: "Product 2", price: 200 },
-    { id: 3, name: "Product 3", price: 300 },
-  ];
+// // for single products
+// app.get("/api/products/:id", (req, res) => {
+//   const products = [
+//     { id: 1, name: "Product 1", price: 100 },
+//     { id: 2, name: "Product 2", price: 200 },
+//     { id: 3, name: "Product 3", price: 300 },
+//   ];
 
-  const product = products.find((p) => p.id === Number(req.params.id));
-  if (!product) {
-    return res.status(404).send("Product not found");
-  }
+//   const product = products.find((p) => p.id === Number(req.params.id));
+//   if (!product) {
+//     return res.status(404).send("Product not found");
+//   }
 
-  res.status(200).json(product);
-});
+//   res.status(200).json(product);
+// });
 
-//create a new product
+// //create a new product
 
-app.post("/api/products", (req, res) => {
-  const product = req.body;
-  product.id = Date.now();
-  if (!product.name || !product.price) {
-    return res.status(400).send("Name and price are required");
-  }
-  res.status(201).json(product);
-});
+// app.post("/api/products", (req, res) => {
+//   const product = req.body;
+//   product.id = Date.now();
+//   if (!product.name || !product.price) {
+//     return res.status(400).send("Name and price are required");
+//   }
+//   res.status(201).json(product);
+// });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
