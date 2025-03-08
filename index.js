@@ -13,7 +13,7 @@ process.on("uncaughtException", (error) => {
   process.exit(1);
 }); //for any other error
 
-process.on("uncaughtException", (reason, promise) => {
+process.on("unHandleRejection", (reason, promise) => {
   console.log(reason);
 });
 
