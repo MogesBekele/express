@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get('/api/products', (req, res) => {
+app.get("/api/products", (req, res) => {
   const products = [
     { id: 1, name: "Product 1", price: 100 },
     { id: 2, name: "Product 2", price: 200 },
@@ -20,8 +20,7 @@ app.get('/api/products', (req, res) => {
   ];
 
   res.status(200).json(products);
-
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
@@ -30,7 +29,7 @@ app.listen(PORT, () => {
 //201 for successfuly post request
 //204 for pu and delete
 // 4xx for client error like bad request
-//5xx for server error 
+//5xx for server error
 // const users = [];
 // app.post("/register", async (req, res) => {
 //   const { username, password } = req.body;
