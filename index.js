@@ -38,6 +38,14 @@ app.get("/api/products/:id", (req, res) => {
   res.status(200).json(product);
 });
 
+//create a new product
+
+app.post("/api/products", (req, res) => {
+  const product = req.body;
+  product.id = Date.now();
+  res.status(201).json(product);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
