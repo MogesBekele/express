@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
 
 
 //synchronous error
+app.get("/error", (req, res) => {
+
+  
+})
 
 
 
