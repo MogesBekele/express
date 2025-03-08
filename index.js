@@ -38,6 +38,9 @@ app.get("/async-error", async (req, res, next) => {
 
 app.use((error, req, res, next) => {
   console.error(error.message);
+  console.log(error.stack);
+  
+  
   res.status(500).send("Server error");
 });
 
