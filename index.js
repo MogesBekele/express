@@ -31,7 +31,7 @@ app.get("/async-error", async (req, res, next) => {
       }, 1000);
     });
   } catch (error) {
-  next(error);
+    next(error);
   }
 });
 
