@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
+
+//synchronous error
+
+
+
 // app.get("/api/products", (req, res) => {
 //   const products = [
 //     { id: 1, name: "Product 1", price: 100 },
