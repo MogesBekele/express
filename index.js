@@ -30,6 +30,7 @@ app.get("/async", async (req, res, next) => {
   }
 });
 
+
 // global error handler
 // app.use((error, req, res, next) => {
 //   console.error(error.message);
