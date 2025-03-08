@@ -34,6 +34,7 @@ app.get("/async-error", async (req, res, next) => {
     next(error);
   }
 });
+//global error handler
 
 // app.get("/api/products", (req, res) => {
 //   const products = [
