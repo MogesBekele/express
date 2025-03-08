@@ -14,9 +14,9 @@ app.get("/", (req, res) => {
 
 
 //synchronous error
-app.get("/error", (req, res) => {
+app.get("/error", (req, res, next) => {
 
-  
+
 })
 
 
