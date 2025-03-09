@@ -17,6 +17,8 @@ process.on("unHandleRejection", (reason, promise) => {
   console.log(reason);
 });
 
+// Middleware to log requests
+
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
