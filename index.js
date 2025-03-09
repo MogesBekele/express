@@ -11,7 +11,7 @@ process.on("uncaughtException", (error) => {
   console.log(error);
 
   process.exit(1);
-}); //for any other error on the app
+}); //for any other error 
 
 process.on("unHandleRejection", (reason, promise) => {
   console.log(reason);
